@@ -1,0 +1,57 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#logo {
+    color: #BB1841;
+    font-size: 36px;
+    font-family: 'Architects Daughter', cursive;
+
+}
+
+#logo:hover {
+    color: #FFF056;
+}
+
+.navbar-default {
+    background-color: black;
+    opacity: 0.8;
+}
+
+#login_button {
+    float: right;
+}
+
+.jumbotron {
+    margin-left: 5%;
+    margin-right: 45%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+div.jumbotron h1 {
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #BB1841;
+    font-size: 3em;
+}
+
+div.jumbotron p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 5em;
+}
+
+footer p {
+    position: fixed;
+    bottom: 1em;
+    left: 0.2em;
+}

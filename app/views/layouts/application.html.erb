@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>MyRecipes</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+<%= render('layouts/header') %>
 <body>
-
+  <%= render('layouts/navigation') %>
+  <div class="jumbotron">
+  <h1>Welcome, fellow foodie!</h1>
+  <p>Here, you can list your delicious recipes, look at other recipies by awesome chefs like yourself. If you like a recipe, you can "like" it here as well. Happy cooking!</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
 <%= yield %>
 
+<footer>
+  <hr>
+  <p>&copy Food Food! 2015</p>
+</footer>
 </body>
 </html>
