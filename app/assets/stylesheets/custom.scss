@@ -11,6 +11,10 @@ html {
     float: left;
     padding: 25px;
     padding-left: 200px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
 
 }
 
@@ -41,9 +45,27 @@ html {
 
 }
 
-#signup {
+#recipes {
   color: #FFF056;
   padding-right: 200px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+}
+
+#recipes:hover {
+  color: #BB1841;
+  text-decoration: none;
+}
+
+#signup {
+  color: #FFF056;
+  padding-right: 0px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
 }
 
 #signup:hover {
@@ -54,6 +76,10 @@ html {
 #login {
   color: #FFF056;
   padding-right: 0px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
 }
 
 #login:hover {
@@ -61,17 +87,13 @@ html {
   text-decoration: none;
 }
 
-
-
-
-
-
 .jumbotron {
+    background-color: transparent;
     margin-left: 200px;
-    margin-right: 45%;
+    margin-right: 200px;
     margin-top: 10%;
     text-align: center;
-    box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.45);
+    // box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.45);
 }
 
 div.jumbotron h1 {
@@ -94,8 +116,25 @@ footer {
     font-size: 14px;
 }
 
-// fix right value after form
 #footer_hr {
     margin-right: 200px;
     margin-bottom: 10px;
+}
+
+.border-blue-join {
+	background-color: white;
+	border: 1px solid #BB1841;
+	color: #BB1841;
+	 -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+
+}
+
+
+.border-blue-join:hover {
+  background-color: white;
+  border: 1px solid #1abc9c;
+  color: #1abc9c;
 }
