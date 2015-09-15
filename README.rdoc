@@ -1,4 +1,4 @@
-Testing specifications for recipe model
+### Testing specifications for recipe model ###
 
 name: String
 summary: text
@@ -6,10 +6,22 @@ description: text
 
 
 - name must be present
-- name must be between 5 and 24 characters
+- name must be between 5 and 100 characters
 - summary must be present
 - summary must be between 10 and 150 characters
 - description must be present
 - description must be between 20 and 500 characters
 
 - chef_id must be present
+
+
+### Testing specifications for the chef model ###
+
+chefname: string
+email: string
+
+- chefname must be present
+- chefname must be between 3 to 48 characters
+- email must be present
+- email must be unique
+- emails must be valid 
