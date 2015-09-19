@@ -7,6 +7,8 @@ html {
 
 body {
   padding-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 
@@ -95,8 +97,8 @@ body {
 
 .jumbotron {
     background-color: transparent;
-    margin-left: 200px;
-    margin-right: 200px;
+    // margin-left: 200px;
+    // margin-right: 200px;
     margin-top: 10%;
     text-align: center;
     // box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.45);
@@ -115,7 +117,7 @@ div.jumbotron p {
 }
 
 footer {
-    padding-left: 200px;
+    // padding-left: 200px;
 }
 
 #copyright {
@@ -123,7 +125,7 @@ footer {
 }
 
 #footer_hr {
-    margin-right: 200px;
+    // margin-right: 200px;
     margin-bottom: 10px;
 }
 
@@ -150,14 +152,9 @@ footer {
 }
 
 .gravatar {
-  border-radius: 10px;
+  border-radius: 100%;
 }
 
 .recipes > h1 {
   text-align: center;
-}
-
-.custom-container {
-  margin-left: 200px;
-  margin-right: 200px;
 }
