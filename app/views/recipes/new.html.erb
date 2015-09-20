@@ -1,29 +1,6 @@
-<p><h1>Tell us how to cook something awesome</h1></p>
+<!-- <p><h1>Tell us how to cook something awesome</h1></p> -->
 
-<% if @recipe.errors.any? %>
-  <div class="row">
-    <div class="alert alert-danger">
-      <h5>Hey, you got something missing in there: </h5>
-      <ul>
-        <% @recipe.errors.full_messages.each do |error| %>
-          <li><%= error %></li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-<% end %>
+<%= render 'shared/page_title', title: "Tell us how to cook something awesome" %>
 
-  <div class="well">
-    <%= form_for @recipe do |f| %>
-      <%= f.label :name, "What are you cooking?"%>
-      <%= f.text_field :name, placeholder: "100 characters" %><br />
 
-      <%= f.label :summary, "Tell us something about it" %>
-      <%= f.text_field :summary, placeholder: "150 characters" %><br />
-
-      <%= f.label :description, "Tell us how to cook it" %>
-      <%= f.text_area :description, rows: 10, placeholder: "500 characters" %><br />
-
-      <%= f.submit "Share Recipe", class: "btn share-recipe" %>
-    <% end %>
-  </div>
+<%= render 'form' %>

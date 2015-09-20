@@ -1,7 +1,8 @@
-
-<p>
+<!-- <p>
   <h1 style="text-align: center"><%= @recipe.name %></h1><span>
-</p>
+</p> -->
+
+<%= render 'shared/page_title', title: @recipe.name %>
 
 <div class="row">
   <div class="col-md-4 pull-right center">
@@ -19,9 +20,10 @@
       <p>
         <strong>Steps: <strong>
       </p>
-      <%= @recipe.description %>
+      <%= simple_format(@recipe.description) %>
     </div>
   </div>
 </div>
 
-<h5> <%= link_to "Return to Recipes Listings", recipes_path, class: "btn btn-small border-blue-join" %></h5>
+<h5> <%= link_to "Return to Recipes Listings", recipes_path, class: "btn btn-small border-blue-join" %>
+<%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small border-blue-join" %></h5>

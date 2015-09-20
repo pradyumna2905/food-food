@@ -1,0 +1,16 @@
+<%= render 'shared/errors', obj: @recipe %>
+
+  <div class="well">
+    <%= form_for @recipe do |f| %>
+      <%= f.label :name, "What are you cooking?"%>
+      <%= f.text_field :name, placeholder: "100 characters" %><br />
+
+      <%= f.label :summary, "Tell us something about it" %>
+      <%= f.text_field :summary, placeholder: "150 characters" %><br />
+
+      <%= f.label :description, "Tell us how to cook it" %>
+      <%= f.text_area :description, rows: 10, placeholder: "500 characters" %><br />
+
+      <%= f.submit(@recipe.new_record? ? "Share Recipe" : "Edit Recipe", class: "btn share-recipe") %>
+    <% end %>
+  </div>
