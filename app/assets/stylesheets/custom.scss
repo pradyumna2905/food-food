@@ -15,7 +15,12 @@ body {
 #logo {
     color: #BB1841;
     font-size: 48px;
-    font-family: 'Architects Daughter', cursive;
+    // font-family: 'Architects Daughter', cursive;
+    // font-family: 'Poiret One', cursive;
+    // font-family: 'Lobster', cursive;
+    // font-family: 'Cookie', cursive;
+    // font-family: 'Playball', cursive;
+    font-family: 'Sacramento', cursive;
     float: left;
     padding: 25px;
     padding-left: 200px;
@@ -156,5 +161,27 @@ footer {
 }
 
 .recipes > h1 {
-  text-align: center;
+  text-align: left;
+}
+
+
+input, textarea {
+  width: 100%;
+  padding: 5px;
+  margin: 0px 5px 15px 0px;
+}
+
+.share-recipe {
+  width: 30%;
+  background-color: #BB1841;
+  color: #FFF056;
+  font-size: 18px;
+}
+
+placeholder {
+  font-style: italic;
+}
+
+.new-recipe {
+  text-align: right;
 }

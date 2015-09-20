@@ -1,0 +1,27 @@
+
+<p>
+  <h1 style="text-align: center"><%= @recipe.name %></h1><span>
+</p>
+
+<div class="row">
+  <div class="col-md-4 pull-right center">
+    <%= gravatar_for @recipe.chef, size: 200 %>
+
+    <p>
+      <h5>Brought to you by: <%= @recipe.chef.chefname %></h5>
+    </p>
+
+  </div>
+
+  <div class="col-md-6 description-container">
+    <h3> <%= @recipe.summary %> </h3>
+    <div class="well">
+      <p>
+        <strong>Steps: <strong>
+      </p>
+      <%= @recipe.description %>
+    </div>
+  </div>
+</div>
+
+<h5> <%= link_to "Return to Recipes Listings", recipes_path, class: "btn btn-small border-blue-join" %></h5>
