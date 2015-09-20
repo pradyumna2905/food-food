@@ -16,6 +16,9 @@
 
   <div class="col-md-6 description-container">
     <h3> <%= @recipe.summary %> </h3>
+    <div class="show-recipe">
+      <%= image_tag(@recipe.picture.url, class: "recipe-image") if @recipe.picture? %>
+    </div>
     <div class="well">
       <p>
         <strong>Steps: <strong>

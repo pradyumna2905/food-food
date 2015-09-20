@@ -1,7 +1,7 @@
 <%= render 'shared/errors', obj: @recipe %>
 
   <div class="well">
-    <%= form_for @recipe do |f| %>
+    <%= form_for(@recipe, html: {multiport: true}) do |f| %>
       <%= f.label :name, "What are you cooking?"%>
       <%= f.text_field :name, placeholder: "100 characters" %><br />
 
@@ -11,6 +11,20 @@
       <%= f.label :description, "Tell us how to cook it" %>
       <%= f.text_area :description, rows: 10, placeholder: "500 characters" %><br />
 
+      <span class="picture-uploader">
+        <%= f.file_field :picture, accept: 'iamge/jpeg, image/gif, image/png, image/jpg' %>
+      </span>
+
       <%= f.submit(@recipe.new_record? ? "Share Recipe" : "Edit Recipe", class: "btn share-recipe") %>
     <% end %>
   </div>
+
+
+<script type="text/javascript">
+  $('#recipe_picture').bind('change', function() {
+    size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert("Sorry, you can only upload files less than 5MB");
+    }
+  });
+</script>
