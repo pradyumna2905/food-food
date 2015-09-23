@@ -3,20 +3,19 @@
 
 html {
     font-family: 'Roboto Condensed', sans-serif;
+    height: 100%;
 }
 
 body {
   padding-top: 100px;
   margin-left: 200px;
   margin-right: 200px;
-  background-image: image-url('background01.jpg');
+  background-image: image-url('44.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
 }
-
 
 #logo {
     // color: #BB1841;
@@ -44,7 +43,6 @@ body {
     -ms-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
-    z-index: 100;
 
 
 }
@@ -56,9 +54,12 @@ body {
 .navbar-default {
     // background-color: #00A5AC;
     background: rgba(0, 165, 172, 0.5);
-    opacity: 0.6;
+    // opacity: 0.6;
     height: 70px;
-    z-index: 0;
+}
+
+.navbar-default::before {
+  opacity: 0.6;
 }
 
 .registration {
@@ -133,7 +134,7 @@ body {
 div.jumbotron h1 {
     margin-top: 0px;
     padding-top: 0px;
-    color: #DA411F;
+    color: #f15623;
     font-size: 3em;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -223,4 +224,8 @@ placeholder {
 
 .recipe-image {
   border-radius: 10px;
+}
+
+.registration-form {
+  width: 700px;
 }
