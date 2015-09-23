@@ -12,6 +12,7 @@ class ChefsController < ApplicationController
     @chef = Chef.new(chef_params)
     if @chef.save
       flash[:success] = "Welcome to the kitchen. Start posting"
+      session[:chef_id] = @chef.id
       redirect_to recipes_path
     else
       render 'new'

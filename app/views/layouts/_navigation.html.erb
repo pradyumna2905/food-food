@@ -15,9 +15,15 @@
   <ul>
     <li class="registration"><%= link_to "RECIPES", recipes_path, id: "recipes"  %></li>
     <li id="vertical-divider"></li>
-    <li class="registration"><%= link_to "REGISTER", "", id: "signup"  %></li>
+    <% if !logged_in %>
+    <li class="registration"><%= link_to "REGISTER", register_path, id: "signup"  %></li>
+    <% end %>
     <li id="vertical-divider"></li>
-    <li class="registration"><%= link_to "LOG IN", "", id: "login"  %></li>
+    <% if !logged_in %>
+      <li class="registration"><%= link_to "LOG IN", login_path, id: "login"  %></li>
+    <% else %>
+    <li class="registration"><%= link_to "LOG OUT", logout_path, id: "login"  %></li>
+    <% end %>
   </ul>
 
 </div>

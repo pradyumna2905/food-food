@@ -1,7 +1,10 @@
 <!-- <span class="recipes"><h1>Recipes</h1></span> -->
 
 <%= render 'shared/page_title', title: "Recipes" %>
+
+<%if logged_in %>
 <%= link_to "New Recipe", new_recipe_path, class: "btn btn-lg border-blue-join new-recipe" %>
+<% end %>
 <hr />
 
 <%= will_paginate %>
