@@ -10,7 +10,7 @@ body {
   padding-top: 100px;
   margin-left: 200px;
   margin-right: 200px;
-  background-image: image-url('44.jpg');
+  background-image: image-url('back12.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -53,7 +53,7 @@ body {
 
 .navbar-default {
     // background-color: #00A5AC;
-    background: rgba(0, 165, 172, 0.5);
+    background: rgba(53, 93, 103, 0.5);
     // opacity: 0.6;
     height: 70px;
 }
@@ -126,7 +126,7 @@ body {
     background-color: transparent;
     // margin-left: 200px;
     // margin-right: 200px;
-    margin-top: 10%;
+    // margin-top: 5%;
     text-align: center;
     // box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.45);
 }
@@ -142,15 +142,21 @@ div.jumbotron h1 {
 div.jumbotron p {
     margin-left: 5%;
     margin-right: 5%;
-    color: #B16FAD;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
 }
 
 footer {
     // padding-left: 200px;
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    width: 100%;
 }
 
 #copyright {
     font-size: 14px;
+    text-align: center;
 }
 
 #footer_hr {
@@ -159,21 +165,25 @@ footer {
 }
 
 .border-blue-join {
-	background-color: white;
-	border: 1px solid #BB1841;
-	color: #BB1841;
+	//background-color: #1eab6d;
+	//opacity: 0;
+	border: 1px solid #f6e300;
+	color: #f6e300;
 	 -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
   -webkit-transition:.5s;
+  font-family: 'Ubuntu', sans-serif;
+  //font-weight: bold;
+  
 
 }
 
 
 .border-blue-join:hover {
-  background-color: white;
+  background-color: #28754e;
   border: 1px solid #1abc9c;
-  color: #1abc9c;
+  color: #ecdf00;
 }
 
 .chef_info {
@@ -228,4 +238,9 @@ placeholder {
 
 .registration-form {
   width: 700px;
+}
+
+.page-title > h1 {
+  text-align: center;
+  color: white;
 }
