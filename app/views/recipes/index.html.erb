@@ -2,6 +2,15 @@
 
 <%= render 'shared/page_title', title: "Recipes" %>
 
+<ul class="nav nav-tabs">
+  <li class="active">
+    <%= link_to "Recipes", recipes_path %>
+  </li>
+  <li>
+    <%= link_to "Chefs", chefs_path %>
+  </li>
+</ul>
+
 <%if logged_in %>
 <%= link_to "New Recipe", new_recipe_path, class: "btn btn-lg border-blue-join new-recipe" %>
 <% end %>
