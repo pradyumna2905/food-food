@@ -38,4 +38,6 @@
 </div>
 
 <h5> <%= link_to "Return to Recipes Listings", recipes_path, class: "btn btn-small border-blue-join" %>
-<%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small border-blue-join" %></h5>
+  <% if logged_in and @recipe.chef == current_user %>
+    <%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small border-blue-join" %></h5>
+  <% end %>

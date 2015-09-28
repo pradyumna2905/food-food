@@ -20,9 +20,20 @@
     <% end %>
     <li id="vertical-divider"></li>
     <% if !logged_in %>
-      <li class="registration"><%= link_to "LOG IN", login_path, id: "login"  %></li>
+      <li class="registration"><%= link_to "LOG IN", login_path, class: "login"  %></li>
     <% else %>
-    <li class="registration"><%= link_to "LOG OUT", logout_path, id: "login"  %></li>
+
+      <li class="registration dropdown">
+        <%= link_to '#', class: "login dropdown-toggle", "data-toggle" => "dropdown" do %>
+          <%= current_user.chefname %><b class="caret"></b>
+        <% end %>
+        <ul class="dropdown-menu">
+          <li><%= link_to "View Profile", chef_path(current_user) %></li>
+          <li><%= link_to "Edit Profile", edit_chef_path(current_user) %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Log Out", logout_path%></li>
+        </ul>
+      </li>
     <% end %>
   </ul>
 
