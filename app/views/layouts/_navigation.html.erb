@@ -13,10 +13,10 @@
 <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
   <div>
   <ul>
-    <li class="registration"><%= link_to "RECIPES", recipes_path, id: "recipes"  %></li>
+    <li class="registration"><%= link_to "RECIPES", recipes_path, class: "recipes"  %></li>
     <li id="vertical-divider"></li>
     <% if !logged_in %>
-    <li class="registration"><%= link_to "REGISTER", register_path, id: "signup"  %></li>
+    <li class="registration"><%= link_to "REGISTER", register_path, class: "login"  %></li>
     <% end %>
     <li id="vertical-divider"></li>
     <% if !logged_in %>
