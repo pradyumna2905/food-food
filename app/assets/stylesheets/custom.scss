@@ -2,8 +2,10 @@
 @import "bootstrap";
 
 html {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -18,23 +20,8 @@ body {
 }
 
 #logo {
-    // color: #BB1841;
     color: #fff;
     font-size: 48px;
-    // font-family: 'Architects Daughter', cursive;
-    // font-family: 'Poiret One', cursive;
-    // font-family: 'Lobster', cursive;
-    // font-family: 'Cookie', cursive;
-    // font-family: 'Playball', cursive;
-    // font-family: 'Sacramento', cursive;
-    // font-family: 'Josefin Slab', serif;
-    // font-family: 'Abril Fatface', cursive;
-    //font-family: 'Abril Fatface', cursive;
-    //font-family: 'Raleway', sans-serif;
-    //font-family: 'Josefin Slab', serif;
-    //font-family: 'Arvo', serif;
-    // font-family: 'Ubuntu', sans-serif;
-    // font-family: 'Lato', sans-serif;
     font-family: 'Ubuntu', sans-serif;
     float: left;
     padding: 25px;
@@ -82,7 +69,7 @@ body {
 
 #recipes {
   color: #FFF056;
-  padding-right: 200px;
+  margin-right: 200px;
   -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
@@ -122,12 +109,13 @@ body {
   text-decoration: none;
 }
 
-.jumbotron {
+.welcome-section {
     background-color: transparent;
     text-align: center;
+    width: 100%;
 }
 
-div.jumbotron h1 {
+div.welcome-section h1 {
     margin-top: 0px;
     padding-top: 0px;
     color: #f15623;
@@ -135,24 +123,25 @@ div.jumbotron h1 {
     font-family: 'Ubuntu', sans-serif;
 }
 
-div.jumbotron p {
+div.welcome-section p {
     margin-left: 5%;
     margin-right: 5%;
-    color: #fff;
+    color: #000;
     font-family: 'Raleway', sans-serif;
 }
 
-footer {
-    // padding-left: 200px;
-    position: absolute;
+.footer-section {
+    position: relative;
     bottom: 20px;
-    color: #fff;
-    width: 100%;
+    color: #000;
+
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+
 }
 
 #copyright {
     font-size: 14px;
-    text-align: center;
 }
 
 #footer_hr {
@@ -236,7 +225,59 @@ placeholder {
   width: 700px;
 }
 
-.page-title > h1 {
+
+.page-title > h2 {
   text-align: center;
-  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.glyphicon-heart {
+  color: black;
+  // text-decoration: none;
+}
+
+
+
+.glyphicon-heart:visited {
+  color: #F90C2D;
+  text-decoration: none;
+}
+
+.glyphicon-heart:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.glyphicon-heart:active {
+  color: #F90C2D;
+  text-decoration: none;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 0px;
+  margin: 0px;
+  border: 0px;
+  width: 300px;
+}
+
+.form-input-top {
+  border-radius: 2px 2px 0px 0px;
+  border: 1px solid #D5D9DD;
+}
+
+.form-input-bottom {
+  border-radius: 0px 0px 2px 2px;
+  border-left: 1px solid #D5D9DD;
+  border-right: 1px solid #D5D9DD;
+  border-bottom: 1px solid #D5D9DD;
+}
+
+.login-form {
+  width: 350px;
+  text-align: center;
+}
+
+.login-btn {
+  width: 300px;
 }
