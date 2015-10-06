@@ -25,7 +25,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     float: left;
     padding: 25px;
-    padding-left: 200px;
+    padding-left: 100px;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -66,10 +66,9 @@ body {
     float: right;
 
 }
-
 .recipes {
-  color: #FFF056;
-  margin-right: 100px;
+  color: #FFF;
+  // margin-right: 100px;
   -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
@@ -77,32 +76,56 @@ body {
 }
 
 .recipes:hover {
-  color: #fff;
+  color: #FFF056;
   text-decoration: none;
 }
 
 .recipes:active {
-  color: #fff;
+  color: #FFF056;
   text-decoration: none;
 }
 
-.recipes-menu:focus {
-  color: #fff;
+.recipes:focus {
+  color: #FFF056;
+  text-decoration: none;
+}
+
+.recipes-cuisines {
+  color: #FFF;
+  margin-right: 100px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+}
+
+.recipes-cuisines:hover {
+  color: #FFF056;
+  text-decoration: none;
+}
+
+.recipes-cuisines:active {
+  color: #FFF056;
+  text-decoration: none;
+}
+
+.recipes-cuisines:focus {
+  color: #FFF056;
   text-decoration: none;
 }
 
 .dropdown-menu:hover {
-  color: #fff;
+  color: #FFF056;
   text-decoration: none;
 }
 
 .dropdown-menu:active {
-  color: #fff;
+  color: #FFF056;
   text-decoration: none;
 }
 
 .dropdown-menu:focus {
-  color: #fff;
+  color: #FFF056;
   text-decoration: none;
 }
 
@@ -221,8 +244,17 @@ ul.info-panel li {
   border-color: #4B747D;
 }
 
-.chef_info {
+.chef-info {
   margin-top: 5px;
+  text-align: center;
+}
+
+.chef-info > h4 {
+  text-align: center;
+}
+
+.chef-info > h5 {
+  text-align: center;
 }
 
 .gravatar {
@@ -393,12 +425,9 @@ input:-moz-placeholder { font-size: 16px; }
   width: 200px;
 }
 
-.panel-btn {
-  text-align: center;
+.error-display-section {
+  width: 600px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
-}
-
-.panel-section {
-  padding-top: 0px;
 }

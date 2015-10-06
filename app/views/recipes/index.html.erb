@@ -1,6 +1,6 @@
 <!-- <span class="recipes"><h1>Recipes</h1></span> -->
 
-<%= render 'shared/page_title', title: "Recipes" %>
+<%= render 'shared/page_title', title: "RECIPES" %>
 
 <ul class="nav nav-tabs">
   <li class="active">
@@ -24,9 +24,9 @@
 <% @recipes.each do |recipe| %>
   <div class="row">
     <div class="col-md-2">
-      <section class="chef_info center">
+      <section class="chef-info center">
         <%= link_to (gravatar_for recipe.chef, size: 100), chef_path(recipe.chef) %>
-        <h5>Chef: <%= recipe.chef.chefname %></h5>
+        <h5>Chef: <b><%= recipe.chef.chefname %></b></h5>
       </section>
     </div>
 

@@ -2,14 +2,14 @@
   <h1 style="text-align: center"><%= @recipe.name %></h1><span>
 </p> -->
 
-<%= render 'shared/page_title', title: @recipe.name %>
+<%= render 'shared/page_title', title: @recipe.name.upcase %>
 
 <div class="row">
-  <div class="col-md-4 pull-right center">
+  <div class="col-md-4 center chef-info">
     <%= link_to gravatar_for(@recipe.chef, size: 200), chef_path(@recipe.chef) %>
 
     <p>
-      <h5>Brought to you by: <%= @recipe.chef.chefname %></h5>
+      <h4>Brought to you by: <b><%= @recipe.chef.chefname %></b></h4>
     </p>
 
   </div>
@@ -45,7 +45,7 @@
 </div>
 
 <h5> <%= link_to "Return to Recipes Listings", recipes_path, class: "btn btn-small border-blue-join" %>
-  <% if logged_in and @recipe.chef == current_user %>
+  <% if logged_in and (@recipe.chef == current_user || current_user.admin?) %>
   <%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small border-blue-join" %></h5>
 
   <% end %>
