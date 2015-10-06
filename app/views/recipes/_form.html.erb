@@ -11,8 +11,21 @@
       <%= f.label :description, "Tell us how to cook it" %>
       <%= f.text_area :description, rows: 10, placeholder: "2000 characters" %><br />
 
+
+      <strong>Cuisine(s): </strong>
+      <%= f.collection_check_boxes :style_ids, Style.all, :id, :name do |cb| %>
+        <% cb.label(class: "checkbox-inline"){cb.check_box(class: "checkbox") + cb.text} %>
+      <% end %>
+      <br />
+
+      <strong>Ingredients: </strong>
+      <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name do |cbi| %>
+        <% cbi.label(class: "checkbox-inline"){cbi.check_box(class: "checkbox") + cbi.text} %>
+      <% end %>
+      <br />
+
       <span class="picture-uploader">
-        <%= f.file_field :picture, accept: 'iamge/jpeg, image/gif, image/png, image/jpg' %>
+        <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png, image/jpg' %>
       </span>
 
       <%= f.submit(@recipe.new_record? ? "Share Recipe" : "Edit Recipe", class: "btn share-recipe") %>

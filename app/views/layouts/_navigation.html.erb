@@ -13,7 +13,32 @@
 <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
   <div>
   <ul>
-    <li class="registration"><%= link_to "RECIPES", recipes_path, class: "recipes"  %></li>
+
+    <li class="registration dropdown recipes">
+      <%= link_to '#', class: "login dropdown-toggle", "data-toggle" => "dropdown" do %>
+        CUISINES <b class="caret"></b>
+        <% end %>
+      <ul class="dropdown-menu">
+        <% Style.all.each do |style| %>
+        <li><%= link_to style.name, style_path(style) %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li id="vertical-divider"></li>
+
+    <li class="registration dropdown">
+      <%= link_to '#', class: "login dropdown-toggle", "data-toggle" => "dropdown" do %>
+        INGREDIENTS <b class="caret"></b>
+      <% end %>
+      <ul class="dropdown-menu">
+        <% Ingredient.all.each do |ingredient| %>
+        <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li id="vertical-divider"></li>
+
+    <li class="registration"><%= link_to "RECIPES", recipes_path, class: "login"  %></li>
     <li id="vertical-divider"></li>
     <% if !logged_in %>
     <li class="registration"><%= link_to "REGISTER", register_path, class: "login"  %></li>

@@ -1,0 +1,10 @@
+<%= render 'shared/errors', obj: @ingredient %>
+<%= render 'shared/page_title', title: "Add Ingredients" %>
+  <div class="well">
+    <%= form_for @ingredient do |f| %>
+      <%= f.label :name, "What ingredients did you use?"%>
+      <%= f.text_field :name, placeholder: "25 characters" %><br />
+
+      <%= f.submit("Add Ingredient", class: "btn share-recipe") %>
+    <% end %>
+  </div>

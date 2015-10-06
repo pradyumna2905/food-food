@@ -19,7 +19,11 @@
     <div class="show-recipe">
       <%= image_tag(@recipe.picture.url, class: "recipe-image") if @recipe.picture? %>
     </div>
+
     <div class="well">
+      <p>Cuisine(s): <%= render @recipe.styles %></p>
+      <p>Ingredients: <%= render @recipe.ingredients %></p>
+
       <p>
         <strong>Steps: <strong>
       </p>
@@ -39,5 +43,6 @@
 
 <h5> <%= link_to "Return to Recipes Listings", recipes_path, class: "btn btn-small border-blue-join" %>
   <% if logged_in and @recipe.chef == current_user %>
-    <%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small border-blue-join" %></h5>
+  <%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small border-blue-join" %></h5>
+
   <% end %>
