@@ -22,6 +22,8 @@
         <% Style.all.each do |style| %>
         <li><%= link_to style.name, style_path(style) %></li>
         <% end %>
+        <li class="divider"></li>
+        <li><%= link_to 'Add new cuisine', new_style_path %></li>
       </ul>
     </li>
     <li id="vertical-divider"></li>
@@ -34,6 +36,8 @@
         <% Ingredient.all.each do |ingredient| %>
         <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
         <% end %>
+        <li class="divider"></li>
+        <li><%= link_to 'Add new ingredient', new_ingredient_path %></li>
       </ul>
     </li>
     <li id="vertical-divider"></li>

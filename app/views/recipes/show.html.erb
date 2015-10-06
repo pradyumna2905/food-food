@@ -3,6 +3,7 @@
 </p> -->
 
 <%= render 'shared/page_title', title: @recipe.name.upcase %>
+<hr />
 
 <div class="row">
   <div class="col-md-4 center chef-info">
@@ -41,11 +42,13 @@
 
       </div>
     </div>
+      <% if logged_in and (@recipe.chef == current_user || current_user.admin?) %>
+        <%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small btn-success btn-std" %>
+      <% end %>&nbsp
+      <%= link_to "Back", recipes_path, class: "btn btn-small btn-success btn-std" %>
+  
   </div>
+  
 </div>
 
-<h5> <%= link_to "Return to Recipes Listings", recipes_path, class: "btn btn-small border-blue-join" %>
-  <% if logged_in and (@recipe.chef == current_user || current_user.admin?) %>
-  <%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small border-blue-join" %></h5>
 
-  <% end %>

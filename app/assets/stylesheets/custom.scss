@@ -249,6 +249,10 @@ ul.info-panel li {
   text-align: center;
 }
 
+.chef-info > h3 {
+  text-align: center;
+}
+
 .chef-info > h4 {
   text-align: center;
 }
@@ -279,12 +283,13 @@ input, textarea {
   font-size: 18px;
 }
 
+
 placeholder {
   font-style: italic;
 }
 
-.new-recipe {
-  text-align: right;
+.btn-styles {
+  right: 0;
 }
 
 
@@ -299,6 +304,15 @@ placeholder {
   }
 }
 
+.new-recipe-form {
+  width: 800px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-center {
+  text-align: center;
+}
 .recipe-image {
   border-radius: 10px;
 }
@@ -378,8 +392,8 @@ placeholder {
   outline: none;
 }
 
-.login-btn {
-  width: 350px;
+.btn-std {
+  width: auto;
   margin-top: 10px;
   border-radius: 0px;
   background-color: #6E8D94;
@@ -388,9 +402,13 @@ placeholder {
   font-size: 16px;
 }
 
-.login-btn:hover {
+.btn-std:hover {
   background-color: #6E8D94;
 }
+.login-btn {
+  width: 350px;
+}
+
 
 .btn-success:focus {
   background-color: #4B747D;
@@ -430,4 +448,19 @@ input:-moz-placeholder { font-size: 16px; }
   height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+.share-recipe-btn {
+  width: 200px;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.add-styles {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-checkbox input {
+  width: auto !important;
 }

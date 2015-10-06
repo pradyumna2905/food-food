@@ -4,17 +4,17 @@
 
 <ul class="nav nav-tabs">
   <li class="active">
-    <%= link_to "Recipes", recipes_path %>
+    <%= link_to "RECIPES", recipes_path %>
   </li>
   <li>
-    <%= link_to "Chefs", chefs_path %>
+    <%= link_to "CHEFS", chefs_path %>
   </li>
 </ul>
 
 <%if logged_in %>
-<%= link_to "New Recipe", new_recipe_path, class: "btn btn-lg border-blue-join new-recipe" %>
-<%= link_to "Add Ingredient(s)", new_ingredient_path, class: "btn btn-lg border-blue-join new-recipe" %></h5>
-<%= link_to "Add Cuisine(s)", new_style_path, class: "btn btn-lg border-blue-join new-recipe" %></h5>
+<%= link_to "Add New Recipe", new_recipe_path, class: "btn btn-lg btn-success btn-std " %>
+<div class="pull-right"><%= link_to "Add Ingredient(s)", new_ingredient_path, class: "btn btn-lg btn-success btn-std btn-styles" %>&nbsp
+<%= link_to "Add Cuisine(s)", new_style_path, class: "btn btn-lg btn-success btn-std btn-styles" %></div>
 <% end %>
 <hr />
 

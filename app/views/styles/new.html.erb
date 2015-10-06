@@ -1,10 +1,10 @@
 <%= render 'shared/errors', obj: @style %>
 <%= render 'shared/page_title', title: "Create a new cuisine" %>
-  <div class="well">
+  <div class="well add-styles">
     <%= form_for @style do |f| %>
       <%= f.label :name, "What cuisine are you cooking?"%>
       <%= f.text_field :name, placeholder: "25 characters" %><br />
 
-      <%= f.submit("Add Cuisine", class: "btn share-recipe") %>
+      <div class="btn-center"><%= f.submit("Add Cuisine", class: "btn btn-success btn-std share-recipe-btn") %></div>
     <% end %>
   </div>
