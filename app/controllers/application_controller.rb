@@ -6,7 +6,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in
 
   def current_user
-    @current_user ||= Chef.find(session[:chef_id]) if session[:chef_id]
+    begin
+      @current_user ||= Chef.find(session[:chef_id]) if session[:chef_id]
+    rescue ActiveRecord::RecordNotFound => e
+      @current_user = nil
+    end 
+      
   end
 
   def logged_in

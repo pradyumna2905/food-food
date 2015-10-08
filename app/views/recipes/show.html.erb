@@ -43,10 +43,10 @@
       </div>
     </div>
       <% if logged_in and (@recipe.chef == current_user || current_user.admin?) %>
-        <%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small btn-success btn-std" %>
-      <% end %>&nbsp
+        <%= link_to "Edit Recipe", edit_recipe_path, class: "btn btn-small btn-success btn-std" %>&nbsp
+      <% end %>
       <%= link_to "Back", recipes_path, class: "btn btn-small btn-success btn-std" %>
-  
+      <div class="pull-right" style="color: red"><%= link_to "[delete recipe]", @recipe, method: :delete, data: {confirm: "Are you sure you want to delete this recipe?" } %>
   </div>
   
 </div>

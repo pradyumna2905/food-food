@@ -1,5 +1,3 @@
-<!-- <span class="recipes"><h1>Recipes</h1></span> -->
-
 <%= render 'shared/page_title', title: "RECIPES" %>
 
 <ul class="nav nav-tabs">
@@ -30,7 +28,7 @@
       </section>
     </div>
 
-    <div class="col-lg-6 well">
+    <div class="col-md-6 well">
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
       <p><%= recipe.summary %></p>
 

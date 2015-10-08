@@ -1,9 +1,9 @@
 class Recipe < ActiveRecord::Base
   belongs_to :chef
-  has_many :likes
-  has_many :recipe_styles
+  has_many :likes, dependent: :destroy
+  has_many :recipe_styles, dependent: :destroy
   has_many :styles, through: :recipe_styles
-  has_many :recipe_ingredients
+  has_many :recipe_ingredients, dependent: :destroy
   has_many :ingredients, through: :recipe_ingredients
 
   validates :chef_id, presence: true
@@ -28,6 +28,6 @@ class Recipe < ActiveRecord::Base
     def picture_size
       if picture.size > 5.megabytes
         errors.add(:picture, "Please keep it under 5MB please")
+      end
     end
-  end
 end

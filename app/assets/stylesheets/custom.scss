@@ -6,6 +6,7 @@ html {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    background-color: #f4f4f2;
 }
 
 body {
@@ -39,7 +40,8 @@ body {
 }
 
 .navbar-default {
-    background-color: #9aaeb3;
+    // background-color: #9aaeb3;
+    background-color: #30302f;
     // background: rgba(53, 93, 103, 0.5);
     // opacity: 0.6;
     height: 70px;
@@ -67,26 +69,25 @@ body {
 
 }
 .recipes {
-  color: #FFF;
-  // margin-right: 100px;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
+  color: #f26964;
+  // -o-transition:.5s;
+  // -ms-transition:.5s;
+  // -moz-transition:.5s;
+  // -webkit-transition:.5s;
 }
 
 .recipes:hover {
-  color: #FFF056;
+  color: #f4f4f2;
   text-decoration: none;
 }
 
 .recipes:active {
-  color: #FFF056;
+  color: #f4f4f2;
   text-decoration: none;
 }
 
 .recipes:focus {
-  color: #FFF056;
+  color: #f4f4f2;
   text-decoration: none;
 }
 
@@ -144,7 +145,7 @@ body {
 }
 
 .welcome-section {
-    background: transparent;
+    background-color: transparent;
     text-align: center;
     width: 100%;
     // opacity: 0;
@@ -463,4 +464,9 @@ input:-moz-placeholder { font-size: 16px; }
 
 .input-checkbox input {
   width: auto !important;
+}
+
+.chef-recipe-display {
+  margin-left: auto;
+  margin-right: auto;
 }
